@@ -1,1 +1,5 @@
+# core
 django==2.2.2
+
+# unit test
+model-mommy==1.6.0
