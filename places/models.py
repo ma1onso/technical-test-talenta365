@@ -27,6 +27,9 @@ class Municipality(models.Model):
         default=True
     )
 
+    class Meta:
+        verbose_name_plural = 'municipalities'
+
     def __str__(self):
         return '{0}'.format(self.name)
 
