@@ -49,7 +49,7 @@ def seek_letters(number):
             number = int(number / alphabet_length) - 1
 
     excel_column_name.reverse()
-    print("".join(excel_column_name))
+    return ''.join(excel_column_name)
 
 
 seek_letters(757)
