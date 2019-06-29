@@ -38,16 +38,18 @@ def seek_letters(number):
     while number > 0:
         remainder = number % alphabet_length
 
-        # If remainder is zero, letter is equal to Z
-        if remainder == 0:
-            excel_column_name.append('Z')
-            number = int(number / alphabet_length) - 1
-        else:
+        # More common case first
+        if remainder != 0:
             excel_column_name.append(latin_alphabet[remainder].upper())
             number = int(number / alphabet_length)
+
+        # If remainder is zero, letter is equal to Z
+        elif remainder == 0:
+            excel_column_name.append('Z')
+            number = int(number / alphabet_length) - 1
 
     excel_column_name.reverse()
     print("".join(excel_column_name))
 
 
-seek_letters(55)
+seek_letters(757)
