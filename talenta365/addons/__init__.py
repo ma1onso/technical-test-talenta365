@@ -32,6 +32,12 @@ latin_alphabet = {
 def seek_letters(number):
     """ Given any positive integer number, get your value in letters. How does Excel.
     """
+    if not type(number) in [int]:
+        raise TypeError('number must be a integer')
+
+    if number < 0:
+        raise ValueError('The number cannot be negative')
+
     excel_column_name = []
     alphabet_length = len(latin_alphabet)
 
@@ -50,6 +56,3 @@ def seek_letters(number):
 
     excel_column_name.reverse()
     return ''.join(excel_column_name)
-
-
-seek_letters(757)
