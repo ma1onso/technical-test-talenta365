@@ -23,3 +23,6 @@ You'll need the following dependencies:
 1. Open terminal and navigate to root folder project (**technical-test-talenta365**)
 1. Run unit tests: `python manage.py test`
 1. Run unit tests: `python manage.py seek_letters 56`, change 56 for another number
+
+
+            # find out how many cycles exists in current number
