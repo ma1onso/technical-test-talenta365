@@ -10,7 +10,7 @@ def check_number_type(func):
     return func_wrapper
 
 
-def check_positive_integer(func):
+def check_number_value(func):
     """ Check if the number is less than zero, if so raise an Exception
     """
     def func_wrapper(number):

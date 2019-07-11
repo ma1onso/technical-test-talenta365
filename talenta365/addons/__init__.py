@@ -1,4 +1,4 @@
-from talenta365.addons.decorators import check_number_type, check_positive_integer
+from talenta365.addons.decorators import check_number_type, check_number_value
 
 latin_alphabet = [
     'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
@@ -7,7 +7,7 @@ latin_alphabet = [
 ]
 
 
-@check_positive_integer
+@check_number_value
 @check_number_type
 def seek_letters(number):
     """ Given any positive integer number, get your value in letters. How does Excel.
