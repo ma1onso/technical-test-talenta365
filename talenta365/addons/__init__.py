@@ -16,9 +16,9 @@ def seek_letters(number):
     alphabet_length = len(latin_alphabet)
 
     while number > 0:
-        remainder = number % alphabet_length
+        remainder = (number - 1) % alphabet_length
 
-        excel_column_name.append(latin_alphabet[remainder - 1].upper())
-        number = int(number / alphabet_length) - 1 if remainder == 0 else int(number / alphabet_length)
+        excel_column_name.append(latin_alphabet[remainder].upper())
+        number = int((number - 1) / alphabet_length)
 
     return ''.join(excel_column_name[::-1])
