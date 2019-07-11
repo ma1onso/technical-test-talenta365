@@ -1,32 +1,8 @@
-latin_alphabet = {
-    1: 'a',
-    2: 'b',
-    3: 'c',
-    4: 'd',
-    5: 'e',
-    6: 'f',
-    7: 'g',
-    8: 'h',
-    9: 'i',
-    10: 'j',
-    11: 'k',
-    12: 'l',
-    13: 'm',
-    14: 'n',
-    15: 'ñ',
-    16: 'o',
-    17: 'p',
-    18: 'q',
-    19: 'r',
-    20: 's',
-    21: 't',
-    22: 'u',
-    23: 'v',
-    24: 'w',
-    25: 'x',
-    26: 'y',
-    27: 'z',
-}
+latin_alphabet = [
+    'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
+    'm', 'n', 'ñ', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w',
+    'x', 'y', 'z'
+]
 
 
 def seek_letters(number):
@@ -46,7 +22,7 @@ def seek_letters(number):
 
         # More common case first
         if remainder != 0:
-            excel_column_name.append(latin_alphabet[remainder].upper())
+            excel_column_name.append(latin_alphabet[remainder - 1].upper())
             number = int(number / alphabet_length)
 
         # If remainder is zero, letter is equal to Z
@@ -54,5 +30,4 @@ def seek_letters(number):
             excel_column_name.append('Z')
             number = int(number / alphabet_length) - 1
 
-    excel_column_name.reverse()
-    return ''.join(excel_column_name)
+    return ''.join(excel_column_name[::-1])
