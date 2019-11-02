@@ -1,5 +1,5 @@
 # core
-django==2.2.2
+django==2.2.4
 
 # unit test
 model-mommy==1.6.0
